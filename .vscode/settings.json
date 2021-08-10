@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "[Solarized Light]": {
+            "activityBar.activeBackground": "#dbbcb2"
+        }
+    },
+    "files.associations": {
+        "stdio.h": "c",
+        "*.tcc": "c",
+        "type_traits": "c"
+    }
+}

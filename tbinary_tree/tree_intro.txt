@@ -1,0 +1,64 @@
+// tree is a collection of its children
+// root is node from where everything starts;
+// parent is a node above the current node; if no parent then it is root; 
+// child is the node just below the parent node;
+// ancestors mean all the nodes that come in path between a current node and root node;
+// descendents mean all the from the current node to leaf node;
+// internal and external nodes;
+// internal nodes are ones within the tree;
+// external nodes are ones that are at the base;also called leaf nodes;
+// height and depth;
+// height and depth's concepts differ according to people;
+// but basically height is generally counted from the the bottom;height of a node is the maximum height out of its left & right child;height of root and tree is calculated as mentioned earlier; height of a leaf node is counted either 0 or 1;heigt would be basically counting level from bottom
+// depth in broad sense means  the number of edges coming on a node from the root node;so depth of root is 0 and depth of tree is no. of edges from root to leaf node; depth of leaf node is actually the depth of the tree; generally depth and height of tree 
+// level of tree is basically counting levels of tree from 1 to downwards; 
+// degree of the node is the number of children; degree of tree is maximum number nodes a tree can have
+// binary tree has only 2 children;
+
+                                                     //   / \              
+//with 3 nodes we can make 5 types of binary tree(/  \ ^  \ /)(these nodes are considered to be unlabeled)
+//ie with n nodes we can make (2nCn/n+1) nodes 
+// this also has iterative approach which includes a formula
+// S(i=0)(j=n) (until i=n or j=0 )= S(i)*S(j);i++; j--
+// max nodes needed to make a tree of  height(height is kinda depth  here) h is:
+    // n=1+2+2^2+2^3+...(upto h)+2^h
+    //  =2^(h+1)-1/(2-1)
+    //  =2^(h+1)-1
+// min nodes n=(h+1)// both egs we assume height at level 1(in root) is 0
+
+// if we just calulate h from the above eqs, we calc max&min height from nodes
+// max height h=n-1 // min nodes becomes condition for max height (intuition)  
+// min height h=log2(n+1)-1; just substition
+
+// internal and external nodes relation is only with degree 0 and degree 2 nodes
+// external nodes(E)=internal nodes(I; degree 2)+1;
+
+// strict binary tree(SBT) means those trees having either 0 child or 2 children
+
+// max nodes n with height h in SBT
+// max nodes n=2^(h+1)-1// same as previous bcz 2 nodes is max
+// min nodes n=2h+1;
+// min height h=log2(n+1)-1
+// max height h=(n-1)/2;
+
+// for strict binary tree:
+// external nodes(E)=internal nodes(I)+1;
+
+// m-ary tree means that they can habe at max m children;(written m bcz n is written for max nodes)
+// so height and nodes analysis of n-ary tree
+// max node n=1+m+m^2+....m^h// m is the max children a node can have
+          // =(m^(h+1)-1)/(m-1)
+// min nodes=h+1
+// min height=(log_m(n(m-1)+1)-1)
+// max height=n-1;
+
+// in case of strict m-ary trees
+// max nodes n=(m^(h+1)-1)/(m-1)
+// min nodes n=mh+1
+// min height=(log_m(n(m-1)+1)-1)
+// max height=(n-1)/m
+
+// perfect tree  is a tree having max nodes for a given height
+// complete tree is one whose array repn does not have any spaces in between
+// or the tree which has is perfect up until height-1 and in the last level has the elements aligned as left as possible
+
